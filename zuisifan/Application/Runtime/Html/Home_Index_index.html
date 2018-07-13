@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页-</title>
+<meta http-equiv="keywords" content="" />
+<meta name="description" content="" />
+</head>
+<body>
+<!--------头部开始-------------->
+<script src="/Public/js/jquery-1.10.2.min.js"></script>
+<script src="/Public/js/global.js"></script>
+
+<!--最顶部-->
+<link rel="stylesheet" href="/Template/pc/default/Static/css/index.css" type="text/css">
+<div class="site-topbar">
+    <div class="layout">
+        <div class="t1-l">
+            <ul class="t1-l-ul">
+                <li class="t1font"><a target="_self" href="tencent://message/?uin=&amp;Site=LNshop商城&amp;Menu=yes">在线客服</a></li>
+                <li class="t1img">&nbsp;</li>
+                <li class="t1font"><a href="/"></a></li>
+                <li class="t1img">&nbsp;</li>
+            </ul>
+        </div>
+        <div class="t1-r">
+            <ul class="t1-r-ul islogin" style="display:none;">
+                <li class="t1font"> <a href="/index.php/Home/User/index.html" class="logon userinfo"></a></li>
+                <li class="t1img">&nbsp;</li>
+                <li class="t1font"><a href="/index.php/Home/user/logout.html">安全退出</a></li>
+
+                <li class="t1img">&nbsp;</li>
+                <li class="t1font"><a href="/index.php/Home/User/order_list.html">我的订单</a></li>
+                <li class="t1img">&nbsp;</li>
+                <li class="t1font"><a href="/index.php/Home/Cart/cart.html">购物车</a></li>
+                <li class="t1img">&nbsp;</li>
+                <!--<li class="t1font"><a href="#">网站地图</a></li>-->
+                <!--<li class="t1img">&nbsp;</li>-->
+            </ul>
+            <ul class="t1-r-ul nologin" style="display:none;">
+                <li class="t1font"><a href="/index.php/Home/user/login.html">登录</a></li>
+                <li class="t1img">&nbsp;</li>
+                <li class="t1font"><a href="/index.php/Home/user/reg.html">免费注册</a></li>
+                <li class="t1img">&nbsp;</li>
+                <li class="t1font"><a href="/index.php/Home/Cart/cart.html">购物车</a></li>
+                <li class="t1img">&nbsp;</li>
+                <!--<li class="t1font"><a href="#">网站地图</a></li>-->
+                <!--<li class="t1img">&nbsp;</li> -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+ <!--------在线客服-------------->
+<style>
+*{margin:0;padding:0;list-style:none;border:none;}
+body{font-size:12px;}
+a{color:#666;text-decoration:none;}
+/*客服代码部分*/
+.qqserver .qqserver-header:after,.qqserver .qqserver-header:before,.qqserver li a:after,.qqserver li a:before{display:table;content:' '}
+.qqserver .qqserver-header:after,.qqserver li a:after{clear:both}
+.qqserver .qqserver-header,.qqserver li a,.tabs,.user-main,.view-category,.view-category-list>li{*zoom:1}
+.qqserver{position:fixed;top:50%;right:0;height:209px;margin-top:-104px;z-index: 9999;}
+.qqserver.unfold .qqserver-body{right:0;z-index:100;}
+.qqserver .qqserver-body{position:absolute;right:-144px;width:122px;height:183px;padding:12px 10px;-webkit-transition:.3s cubic-bezier(.19,1,.22,1);-o-transition:.3s cubic-bezier(.19,1,.22,1);transition:.3s cubic-bezier(.19,1,.22,1);border:1px solid #e63547;border-radius:4px;background:#f4f7fa}
+.qqserver .qqserver_fold{position:absolute;right:0;padding:14px 7px;cursor:pointer;border-top-left-radius:4px;border-bottom-left-radius:4px;background:#e63547}
+.qqserver .qqserver-header{padding-bottom:10px;padding-left:6px;border-bottom:1px dashed #d1d4cc}
+.qqserver .qqserver-header *{float:left}
+.qqserver .qqserver_arrow{margin-top:-1px;margin-left:7px;cursor:pointer}
+.qqserver li{margin-top:6px}
+.qqserver li a{display:block;padding:6px 12px 4px}
+.qqserver li a div{font-size:14px;float:left;margin-right:11px;color:#697466}
+.qqserver li a span{font-size:12px;line-height:18px;float:left;text-indent:4px;color:#fff}
+.qqserver li a span.qqserver-service-alert{font-weight:400;display:block}
+.qqserver li a:hover{text-decoration:none;border-radius:4px;background:#eaebe9}
+.qqserver li a:hover div{color:#e63547}
+.qqserver .qqserver-footer{margin-top:10px;padding-top:14px;padding-bottom:14px;padding-left:11px;border-top:1px dashed #d1d4cc}
+.qqserver .qqserver-footer .text-primary{color:#e63547;font-size:14px;}
+.qqserver .qqserver_icon-alert{display:inline-block;margin-right:10px;vertical-align:-3px;*display:inline;*zoom:1;*vertical-align:-1px}
+.qqserver-header div{width:90px;height:18px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:-419px -80px}
+.qqserver_icon-alert{width:16px;height:14px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:-595px -85px}
+.qqserver li a span{width:30px;height:23px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:-265px 0}
+.qqserver li a .qqserver-service-alert{width:30px;height:22px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:-342px 0}
+.qqserver_fold div{width:26px;height:132px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:0 0}
+.qqserver_fold:hover div{width:26px;height:132px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:-27px 0}
+.qqserver_arrow{width:18px;height:18px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:-435px 0}
+.qqserver_arrow:hover{width:18px;height:18px;background-image:url(/Template/pc/default/Static/images/lanren.png);background-position:-435px -38px}
+</style>
+<!-- 代码部分begin -->
+<div class="qqserver">
+  <div class="qqserver_fold">
+    <div></div>
+  </div>
+  <div class="qqserver-body" style="display: block;">
+    <div class="qqserver-header">
+      <div></div>
+      <span class="qqserver_arrow"></span> </div>
+    <ul>
+      <li> <a title="点击这里给我发消息" href="tencent://message/?uin=&amp;Site=LNshop商城&amp;Menu=yes" target="_self">
+        <div>客服咨询</div>
+        <span>琳琳</span> </a> </li>
+      <li> <a title="点击这里给我发消息" href="tencent://message/?uin=&amp;Site=LNshop商城&amp;Menu=yes" target="_self">
+        <div>客服咨询</div>
+        <span>云云</span> </a> </li>
+      <li> <a title="点击这里给我发消息" href="tencent://message/?uin=&amp;Site=LNshop商城&amp;Menu=yes" target="_self">
+        <div>技术咨询</div>
+        <span class="qqserver-service-alert">XX</span> </a> </li>
+    </ul>
+    <div class="qqserver-footer"><span class="qqserver_icon-alert"></span><a class="text-primary" href="javascript:;">大家都在说</a> </div>
+  </div>
+</div>
+<!--<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>-->
+<script>
+$(function(){
+	var $qqServer = $('.qqserver');
+	var $qqserverFold = $('.qqserver_fold');
+	var $qqserverUnfold = $('.qqserver_arrow');
+	$qqserverFold.click(function(){
+		$qqserverFold.hide();
+		$qqServer.addClass('unfold');
+	});
+	$qqserverUnfold.click(function(){
+		$qqServer.removeClass('unfold');
+		$qqserverFold.show();
+	});
+	//窗体宽度小鱼1024像素时不显示客服QQ
+	function resizeQQserver(){
+		$qqServer[document.documentElement.clientWidth < 1024 ? 'hide':'show']();
+	}
+	$(window).bind("load resize",function(){
+		resizeQQserver();
+	});
+});
+</script>
+<!-- 代码部分end -->
+ <!--------在线客服-------------->
+<!--顶部banner开始-->    
+<!--顶部banner结束-->    
+
+<header>
+    
+    <div class="layout">
+    
+    <!--logo开始-->
+        <div class="logo"><a href="/" title="LNshop"><img src="" alt="LNshop"></a></div>
+    <!--logo结束-->
+    
+    <!-- 搜索开始-->
+        <div class="searchBar">
+            <div class="searchBar-form">
+                <form name="sourch_form" id="sourch_form" method="post" action="/index.php/Home/Goods/search.html">
+                    <input type="text" class="text" name="q" id="q" value=""  placeholder="  搜索关键字"/>
+                    <input type="button" class="button" value="搜索" onclick="if($.trim($('#q').val()) != '') $('#sourch_form').submit();"/>
+                </form>
+            </div>
+            <div class="searchBar-hot">
+                <b>热门搜索</b>
+               	            </div>
+        </div>
+        <!-- 搜索结束-->
+        
+        <div class="ri-mall">
+            <div class="my-mall">
+            <!---我的商城-开始 -->
+                <div class="mall">
+                    <div class="le"><a href="/index.php/Home/User.html" >我的商城</a></div> 
+                </div>
+                <!---我的商城-结束 -->
+            </div>
+            <div class="my-mall" id="header_cart_list">
+                <!---购物车-开始 -->
+                <div class="micart">
+                    <div class="le les">
+                    	<a href="/index.php/Home/Cart/cart.html" >我的购物车
+                            <span class="shopping-num"><em id="cart_quantity"></em><b></b></span>
+                        </a>                       
+                    </div>
+                    
+                    <div class="ri ris" style="display:">
+                       <div class="micart-about">
+                                <span class="micart-xg">您的购物车是空的，赶紧选购吧！</span>
+                            </div>                        <div class="commod">
+                        <ul>
+                           							
+                        </ul>
+                        </div>
+                        <div class="settle">
+                            <p>共<em></em>件商品，金额合计<b>¥&nbsp;</b></p>
+                            <a class="js-button" href="/index.php/Home/Cart/cart.html">去结算</a>
+                        </div>
+                    </div>
+                </div>
+                <!---购物车-结束 -->
+                
+            </div>
+        </div>
+        <div class="qr-code">
+            <!--<img src="/Template/pc/default/Static/images/qrcode_vmall_app01.png" alt="二维码" />
+            <p>扫一扫</p>-->
+        </div>
+    </div>
+</header>
+   <!-- 导航-开始-->
+   
+   
+   	<div class="navigation">
+    	<div class="layout">
+        	<!--全部商品-开始-->
+        	<div class="allgoods">
+            	<div class="goods_num" onclick="list_li_show_hide();" title="点击查看全部"><a style="text-decoration:none;" href="javascript:;"><h2>查看全部</h2><i class="trinagle" ></i></a></div>
+            	<div class="list" style="display:block;" >
+                   <ul class="list_ul"> 
+                       
+                	</ul>
+                </div>
+            </div>
+            <!--全部商品-结束-->
+            
+            <div class="ongoods">
+            	<ul class="navlist">
+            		<li class="homepage"><a href="/"><span>首页</span></a></li>
+                                	</ul>
+            </div>
+        </div>
+    </div>
+   <!-- 导航-结束-->
+<script>
+$(function(){
+
+
+    var active_li = '';
+    if(active_li){
+        $('li').remove('curr-res');
+        $('#'+active_li).addClass('curr-res');
+    }
+   	
+    var uname= getCookie('uname');
+    if(uname == ''){
+    	$('.islogin').remove();
+    	$('.nologin').show();
+    }else{
+    	$('.nologin').remove();
+    	$('.islogin').show();
+    	$('.userinfo').html(decodeURIComponent(uname));
+    }
+    get_cart_num();
+})
+
+
+
+function get_cart_num(){
+	  var cart_cn = getCookie('cn');
+	  if(cart_cn == ''){
+		$.ajax({
+			type : "GET",
+			url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+			success: function(data){								 
+				cart_cn = getCookie('cn');		
+				$('#cart_quantity').html(cart_cn);
+			}
+		});	
+	  }
+	  $('#cart_quantity').html(cart_cn);
+}
+/**
+* 鼠标移动端到头部购物车上面 就ajax 加载
+*/
+// 鼠标是否移动到了上方
+var header_cart_list_over = 0; 
+$("#header_cart_list > .micart > .les").hover(function(){	 
+       if(header_cart_list_over == 1) 
+			return false;	
+        header_cart_list_over = 1; 
+		$.ajax({
+			type : "GET",
+			url:"/index.php?m=Home&c=Cart&a=header_cart_list",//+tab,
+			success: function(data){								 
+			 	$("#header_cart_list > .micart > .ris").html(data);	
+			 	get_cart_num();
+			}
+		});			
+}).mouseout(function(){
+	
+	 (typeof(t) == "undefined") || clearTimeout(t); 	 
+	 t = setTimeout(function () { 
+			header_cart_list_over = 0; /// 标识鼠标已经离开
+		}, 1000);		
+});
+    //鼠标点击，分类展示或隐藏
+    function list_li_show_hide(){
+        $('.list-li').each(function(i,o){
+            if(i>6){
+                if($(o).css("display")=="block"){
+                    $(o).css("display", 'none');
+                }else{
+                    $(o).css("display", 'block');
+                }
+            }
+        });
+    }
+
+</script>
+<!--------头部结束-------------->
+<!-- 首页轮播图片 轮播js 广告-->
+<script src="/Template/pc/default/Static/js/slider.js"></script>
+<script type="text/javascript">
+// 首页轮播图片 轮播js 广告
+$(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+	$('#banner_tabs .flex-prev').click(function() {
+		bannerSlider.prev()
+	});
+	$('#banner_tabs .flex-next').click(function() {
+		bannerSlider.next()
+	});
+})
+</script>
+<!-- 首页轮播图片 轮播js 广告 end-->
+<!--------banner-开始-------------->
+	<div class="nav-banner">
+        <div id="banner_tabs" class="flexslider">
+            <ul class="slides">                
+            <!---广告 select * from __PREFIX__ad where position_id = 2 limit 1-->
+                      
+            </ul>
+            <!--<ul class="flex-direction-nav">
+                <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+                <li><a class="flex-next" href="javascript:;">Next</a></li>
+            </ul>-->
+            <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+		        
+            </ol>
+    	</div>	
+	</div>
+<!--------banner-结束-------------->
+
+<!--------热卖-首发-新闻-公告-开始-------------->
+    <div class="layout">
+    	<div class="bs-le">
+        	<div class="first">
+            	<ul>                 
+                           	</ul>
+            </div>
+        </div>
+    	<div class="bs-ri">
+        	<div class="ris-adve"><!--公告上方广告位-->
+                            </div>
+        	<div class="ris-notice">
+            	<div class="notice_t">
+                	<ul>
+                		<li id="not_col"><a href="">公告</a></li>
+                		<li id="not_new"><a href="">新闻</a></li>
+                	</ul>
+                </div>
+            	<div class="notice_b">
+                	<ul class="nob1">
+                                            	</ul>
+                    <ul class="nob2">
+                                                 </ul>
+                </div> 
+             </div>
+             <!--公告下方广告位-->
+        	 <div class="ris-as"> 
+                            </div>
+        	</div>	
+        </div>
+            
+    </div>
+
+<!--------热卖-首发-新闻-公告-结束-------------->
+
+	
+<!--------中部banner-开始-------------->
+	<div class="layout">
+    	<div class="cen-banne">
+               
+        </div>
+    </div>
+<!--------中部banner-结束-------------->
+
+<!--------楼层-开始-------------->
+<!--------楼层-结束-------------->
+ 
+
+<!--------底部banner-开始-------------->
+	<div class="layout layer">
+    	<div class="cen-banne">
+                        
+        </div>
+    </div>
+<!--------底部banner-结束-------------->
+
+<!--------footer-开始-------------->
+<div class="footer">
+    <div class="layout quality layer">
+        <ul class="footer_quality">
+            <li><i></i>品质保证</li>
+            <li  class="f2"><i></i>7天退换 15天换货</li>
+            <li  class="f3"><i> </i>优质的配送服务</li>
+            <li  class="f4"><i></i>448家维修网点 全国联保</li>
+        </ul>
+    </div>
+    <div class="helpful layout">
+        <dl>
+            <dt><a href="/Home/Article/detail/article_id/1.html" target="_blank">帮助中心</a></dt>
+        </dl>
+        <dl class="shfw">
+            <dt><a href="/Home/Article/detail/article_id/2.html" target="_blank">售后服务</a></dt>
+        </dl>
+        <dl class="shfw">
+            <dt><a href="/Home/Article/detail/article_id/3.html" target="_blank">技术支持</a></dt>
+        </dl>
+        <dl class="shfw">
+            <dt><a href="/Home/Article/detail/article_id/4.html" target="_blank">关于商城</a></dt>
+        </dl>
+
+    </div>
+     <div class="keep-on-record">
+        <p>
+            技术支持: <a href="http://www.xx.com" target="_blank" >山东XX网络科技有限公司</a>
+        </p>
+     </div>
+ </div>
+ 
+
+<!--------footer-结束-------------->
+<script>	
+$(document).ready(function(){
+			
+		  /* 新闻和公告的 js 切换*/
+		  $(".nob2").css("display", "none");			
+		  $("#not_col").hover(function(){
+			$(".nob1").css("display", "block");
+			$(".nob2").css("display", "none");
+			$(this).css('background-color','#FFF');
+			$("#not_new").css('background-color','#fcf7f7');
+		  });
+		   /* 新闻和公告的 js 切换*/
+		  $("#not_new").hover(function(){
+			$(".nob2").css("display", "block")
+			$(".nob1").css("display", "none");
+			$(this).css('background-color','#FFF');
+			$("#not_col").css('background-color','#fcf7f7');
+		  })
+
+});		
+</script>	 
+
+<script src="/Public/js/jqueryUrlGet.js"></script><!--获取get参数插件-->
+<script> 
+set_first_leader(); //设置推荐人 
+// 如果是手机浏览器跳到手机
+if(isMobileBrowser())
+   location.href="/index.php/Mobile/Index/index.html";
+</script>
+
+</body>
+</html>
